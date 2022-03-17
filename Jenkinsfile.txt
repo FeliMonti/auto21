@@ -10,22 +10,23 @@ pipeline {
             steps {
                 sh "mvn test"
             }
-        }
             post {
                 always {
                     junit '**/TEST-FooTest.xml'
                 }
             }
+        }
+            
         stage('Newman') {
             steps {
                 sh "newman run Postman AutoLabb3 Environment.postman_environment.json --environment Postman AutoLabb3.postman_collection.json --reporters junit"
             }
-        }
             post {
                 always {
                     junit '**/*xml'
+                }
             }
         }
-
+            
     }
 }
