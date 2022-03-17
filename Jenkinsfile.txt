@@ -3,13 +3,18 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                bat "mvn compile"
+                sh "mvn compile"
             }
         }
         stage('Test') {
             steps {
-                bat "mvn test"
+                sh "mvn test"
             }
+        stage('API Testing with Newman') {
+            steps {
+                sh " "
+            }
+        }
             post {
                 always {
                     junit '**/TEST-FooTest.xml'
