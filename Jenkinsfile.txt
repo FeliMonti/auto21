@@ -24,7 +24,7 @@ pipeline {
             
         stage('Newman') {
             steps {
-                sh "newman run Postman AutoLabb3 Environment.postman_environment.json --environment Postman AutoLabb3.postman_collection.json --reporters junit"
+                sh "newman run Postman AutoLabb3.postman_collection.json --environment Postman AutoLabb3 Environment.postman_environment.json --reporters junit"
             }
             post {
                 always {
