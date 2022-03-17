@@ -1,0 +1,8 @@
+/.idea/
+/Results/
+/Scripts/__pycache__/
+*log.html
+*output.xml
+*Results.html
+*selenium-screenshot*.png
+.DS_Store
