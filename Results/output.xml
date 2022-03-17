@@ -1,0 +1,779 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.11.0a5 on darwin)" generated="20220309 16:55:06.964" rpa="false" schemaversion="2">
+<suite id="s1" name="Tests" source="/Users/feliciaauthersthol/PycharmProjects/AutoLabb2/Tests">
+<suite id="s1-s1" name="Webtest" source="/Users/feliciaauthersthol/PycharmProjects/AutoLabb2/Tests/webtest.robot">
+<kw name="Begin Web Test" library="keywords" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220309 16:55:07.088" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20220309 16:55:07.088" endtime="20220309 16:55:10.215"/>
+</kw>
+<status status="PASS" starttime="20220309 16:55:07.088" endtime="20220309 16:55:10.218"/>
+</kw>
+<test id="s1-s1-t1" name="User Can Click On Logo And Divert To Start Page">
+<kw name="Go To Web Page" library="keywords">
+<kw name="Load Page" library="keywords">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220309 16:55:10.220" level="INFO">Opening url 'http://rental13.infotiv.net/webpage/html/gui/index.php'</msg>
+<status status="PASS" starttime="20220309 16:55:10.220" endtime="20220309 16:55:10.976"/>
+</kw>
+<status status="PASS" starttime="20220309 16:55:10.219" endtime="20220309 16:55:10.976"/>
+</kw>
+<kw name="Verify Page Loaded" library="keywords">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Infotiv Car Rental</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220309 16:55:10.976" endtime="20220309 16:55:11.017"/>
+</kw>
+<status status="PASS" starttime="20220309 16:55:10.976" endtime="20220309 16:55:11.017"/>
+</kw>
+<status status="PASS" starttime="20220309 16:55:10.219" endtime="20220309 16:55:11.017"/>
+</kw>
+<kw name="Click On Logo" library="keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="logo"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220309 16:55:11.018" level="INFO">Clicking element '//*[@id="logo"]'.</msg>
+<status status="PASS" starttime="20220309 16:55:11.017" endtime="20220309 16:55:11.142"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220309 16:55:12.145" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220309 16:55:11.143" endtime="20220309 16:55:12.145"/>
+</kw>
+<status status="PASS" starttime="20220309 16:55:11.017" endtime="20220309 16:55:12.145"/>
+</kw>
+<kw name="Verify Current URL is startpage" library="keywords">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220309 16:55:12.152" level="INFO">Current location is 'http://rental13.infotiv.net/webpage/html/gui/index.php'.</msg>
+<status status="PASS" starttime="20220309 16:55:12.146" endtime="20220309 16:55:12.152"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220309 16:55:13.155" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220309 16:55:12.152" endtime="20220309 16:55:13.157"/>
+</kw>
+<status status="PASS" starttime="20220309 16:55:12.145" endtime="20220309 16:55:13.159"/>
+</kw>
+<doc>This test case verifies the logo are clickable and will take user to the start page.</doc>
+<tag>Header</tag>
+<status status="PASS" starttime="20220309 16:55:10.218" endtime="20220309 16:55:13.161"/>
+</test>
+<test id="s1-s1-t2" name="User Can Click Logo On Booking Page And Divert To Start Page">
+<kw name="Verify On Booking Page" library="keywords">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${URLBOOKING}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220309 16:55:13.172" level="INFO">Current location is 'http://rental13.infotiv.net/webpage/html/gui/index.php'.</msg>
+<status status="PASS" starttime="20220309 16:55:13.168" endtime="20220309 16:55:13.172"/>
+</kw>
+<status status="PASS" starttime="20220309 16:55:13.167" endtime="20220309 16:55:13.173"/>
+</kw>
+<kw name="Click On Logo" library="keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="logo"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220309 16:55:13.173" level="INFO">Clicking element '//*[@id="logo"]'.</msg>
+<status status="PASS" starttime="20220309 16:55:13.173" endtime="20220309 16:55:13.267"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220309 16:55:14.270" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220309 16:55:13.267" endtime="20220309 16:55:14.270"/>
+</kw>
+<status status="PASS" starttime="20220309 16:55:13.173" endtime="20220309 16:55:14.271"/>
+</kw>
+<kw name="Verify Current URL is startpage" library="keywords">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220309 16:55:14.276" level="INFO">Current location is 'http://rental13.infotiv.net/webpage/html/gui/index.php'.</msg>
+<status status="PASS" starttime="20220309 16:55:14.271" endtime="20220309 16:55:14.276"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220309 16:55:15.279" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220309 16:55:14.276" endtime="20220309 16:55:15.279"/>
+</kw>
+<status status="PASS" starttime="20220309 16:55:14.271" endtime="20220309 16:55:15.279"/>
+</kw>
+<doc>This test case verifies the logo are clickable and will take user to the start page.</doc>
+<tag>Header</tag>
+<status status="PASS" starttime="20220309 16:55:13.166" endtime="20220309 16:55:15.280"/>
+</test>
+<test id="s1-s1-t3" name="User Can Click Logo Confirm Booking Page And Divert To Start Page">
+<kw name="Verify On Confirm Booking Page" library="keywords">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URLCONFIRMBOOKING}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220309 16:55:15.284" level="INFO">Opening url 'http://rental13.infotiv.net/webpage/html/gui/confirmBook.php'</msg>
+<status status="PASS" starttime="20220309 16:55:15.283" endtime="20220309 16:55:15.374"/>
+</kw>
+<status status="PASS" starttime="20220309 16:55:15.283" endtime="20220309 16:55:15.374"/>
+</kw>
+<kw name="Click On Logo" library="keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="logo"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220309 16:55:15.375" level="INFO">Clicking element '//*[@id="logo"]'.</msg>
+<status status="PASS" starttime="20220309 16:55:15.375" endtime="20220309 16:55:15.430"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220309 16:55:16.433" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220309 16:55:15.431" endtime="20220309 16:55:16.434"/>
+</kw>
+<status status="PASS" starttime="20220309 16:55:15.375" endtime="20220309 16:55:16.434"/>
+</kw>
+<kw name="Verify Current URL is startpage" library="keywords">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220309 16:55:16.439" level="INFO">Current location is 'http://rental13.infotiv.net/webpage/html/gui/index.php'.</msg>
+<status status="PASS" starttime="20220309 16:55:16.435" endtime="20220309 16:55:16.439"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220309 16:55:17.440" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220309 16:55:16.439" endtime="20220309 16:55:17.440"/>
+</kw>
+<status status="PASS" starttime="20220309 16:55:16.434" endtime="20220309 16:55:17.440"/>
+</kw>
+<doc>This test case verifies the logo are clickable and will take user to the start page.</doc>
+<tag>Header</tag>
+<status status="PASS" starttime="20220309 16:55:15.281" endtime="20220309 16:55:17.440"/>
+</test>
+<test id="s1-s1-t4" name="User Can Click Logo On Show Car Page And Divert To Start Page">
+<kw name="Verify On Show Car Page" library="keywords">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URLSHOWCAR}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220309 16:55:17.441" level="INFO">Opening url 'http://rental13.infotiv.net/webpage/html/gui/showCars.php'</msg>
+<status status="PASS" starttime="20220309 16:55:17.441" endtime="20220309 16:55:17.618"/>
+</kw>
+<status status="PASS" starttime="20220309 16:55:17.441" endtime="20220309 16:55:17.618"/>
+</kw>
+<kw name="Click On Logo" library="keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="logo"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220309 16:55:17.618" level="INFO">Clicking element '//*[@id="logo"]'.</msg>
+<status status="PASS" starttime="20220309 16:55:17.618" endtime="20220309 16:55:17.668"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220309 16:55:18.669" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220309 16:55:17.668" endtime="20220309 16:55:18.670"/>
+</kw>
+<status status="PASS" starttime="20220309 16:55:17.618" endtime="20220309 16:55:18.670"/>
+</kw>
+<kw name="Verify Current URL is startpage" library="keywords">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220309 16:55:18.676" level="INFO">Current location is 'http://rental13.infotiv.net/webpage/html/gui/index.php'.</msg>
+<status status="PASS" starttime="20220309 16:55:18.671" endtime="20220309 16:55:18.676"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220309 16:55:19.678" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220309 16:55:18.676" endtime="20220309 16:55:19.678"/>
+</kw>
+<status status="PASS" starttime="20220309 16:55:18.671" endtime="20220309 16:55:19.678"/>
+</kw>
+<doc>This test case verifies the logo are clickable and will take user to the start page.</doc>
+<tag>Header</tag>
+<status status="PASS" starttime="20220309 16:55:17.440" endtime="20220309 16:55:19.679"/>
+</test>
+<test id="s1-s1-t5" name="User Can Click Logo On MyPage And Divert To Start Page">
+<kw name="Verify On MyPage" library="keywords">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URLMYPAGE}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220309 16:55:19.681" level="INFO">Opening url 'http://rental13.infotiv.net/webpage/html/gui/myPage.php'</msg>
+<status status="PASS" starttime="20220309 16:55:19.681" endtime="20220309 16:55:19.736"/>
+</kw>
+<status status="PASS" starttime="20220309 16:55:19.681" endtime="20220309 16:55:19.736"/>
+</kw>
+<kw name="Click On Logo" library="keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="logo"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220309 16:55:19.736" level="INFO">Clicking element '//*[@id="logo"]'.</msg>
+<status status="PASS" starttime="20220309 16:55:19.736" endtime="20220309 16:55:19.795"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220309 16:55:20.797" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220309 16:55:19.795" endtime="20220309 16:55:20.797"/>
+</kw>
+<status status="PASS" starttime="20220309 16:55:19.736" endtime="20220309 16:55:20.798"/>
+</kw>
+<kw name="Verify Current URL is startpage" library="keywords">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220309 16:55:20.804" level="INFO">Current location is 'http://rental13.infotiv.net/webpage/html/gui/index.php'.</msg>
+<status status="PASS" starttime="20220309 16:55:20.799" endtime="20220309 16:55:20.804"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220309 16:55:21.806" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220309 16:55:20.804" endtime="20220309 16:55:21.807"/>
+</kw>
+<status status="PASS" starttime="20220309 16:55:20.798" endtime="20220309 16:55:21.807"/>
+</kw>
+<doc>This test case verifies the logo are clickable and will take user to the start page.</doc>
+<tag>Header</tag>
+<status status="PASS" starttime="20220309 16:55:19.680" endtime="20220309 16:55:21.808"/>
+</test>
+<test id="s1-s1-t6" name="User Can Click On Title And Divert To Start Page">
+<kw name="Go To Web Page" library="keywords">
+<kw name="Load Page" library="keywords">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220309 16:55:21.811" level="INFO">Opening url 'http://rental13.infotiv.net/webpage/html/gui/index.php'</msg>
+<status status="PASS" starttime="20220309 16:55:21.811" endtime="20220309 16:55:21.856"/>
+</kw>
+<status status="PASS" starttime="20220309 16:55:21.811" endtime="20220309 16:55:21.856"/>
+</kw>
+<kw name="Verify Page Loaded" library="keywords">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Infotiv Car Rental</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220309 16:55:21.856" endtime="20220309 16:55:21.860"/>
+</kw>
+<status status="PASS" starttime="20220309 16:55:21.856" endtime="20220309 16:55:21.861"/>
+</kw>
+<status status="PASS" starttime="20220309 16:55:21.810" endtime="20220309 16:55:21.861"/>
+</kw>
+<kw name="Click On Title" library="keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="title"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220309 16:55:21.861" level="INFO">Clicking element '//*[@id="title"]'.</msg>
+<status status="PASS" starttime="20220309 16:55:21.861" endtime="20220309 16:55:21.924"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220309 16:55:22.926" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220309 16:55:21.924" endtime="20220309 16:55:22.927"/>
+</kw>
+<status status="PASS" starttime="20220309 16:55:21.861" endtime="20220309 16:55:22.927"/>
+</kw>
+<kw name="Verify Current URL is startpage" library="keywords">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220309 16:55:22.934" level="INFO">Current location is 'http://rental13.infotiv.net/webpage/html/gui/index.php'.</msg>
+<status status="PASS" starttime="20220309 16:55:22.928" endtime="20220309 16:55:22.934"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220309 16:55:23.936" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220309 16:55:22.934" endtime="20220309 16:55:23.936"/>
+</kw>
+<status status="PASS" starttime="20220309 16:55:22.927" endtime="20220309 16:55:23.937"/>
+</kw>
+<doc>This test case verifies the title are clickable and will take user to the start page.</doc>
+<tag>Header</tag>
+<status status="PASS" starttime="20220309 16:55:21.809" endtime="20220309 16:55:23.937"/>
+</test>
+<test id="s1-s1-t7" name="User Can Click Title On Booking Page And Divert To Start Page">
+<kw name="Verify On Booking Page" library="keywords">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${URLBOOKING}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220309 16:55:23.947" level="INFO">Current location is 'http://rental13.infotiv.net/webpage/html/gui/index.php'.</msg>
+<status status="PASS" starttime="20220309 16:55:23.941" endtime="20220309 16:55:23.947"/>
+</kw>
+<status status="PASS" starttime="20220309 16:55:23.940" endtime="20220309 16:55:23.947"/>
+</kw>
+<kw name="Click On Title" library="keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="title"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220309 16:55:23.948" level="INFO">Clicking element '//*[@id="title"]'.</msg>
+<status status="PASS" starttime="20220309 16:55:23.947" endtime="20220309 16:55:24.000"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220309 16:55:25.003" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220309 16:55:24.001" endtime="20220309 16:55:25.003"/>
+</kw>
+<status status="PASS" starttime="20220309 16:55:23.947" endtime="20220309 16:55:25.003"/>
+</kw>
+<kw name="Verify Current URL is startpage" library="keywords">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220309 16:55:25.009" level="INFO">Current location is 'http://rental13.infotiv.net/webpage/html/gui/index.php'.</msg>
+<status status="PASS" starttime="20220309 16:55:25.004" endtime="20220309 16:55:25.009"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220309 16:55:26.011" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220309 16:55:25.009" endtime="20220309 16:55:26.011"/>
+</kw>
+<status status="PASS" starttime="20220309 16:55:25.004" endtime="20220309 16:55:26.011"/>
+</kw>
+<doc>This test case verifies the logo are clickable and will take user to the start page.</doc>
+<tag>Header</tag>
+<status status="PASS" starttime="20220309 16:55:23.938" endtime="20220309 16:55:26.012"/>
+</test>
+<test id="s1-s1-t8" name="User Can Click Title Confirm Booking Page And Divert To Start Page">
+<kw name="Verify On Confirm Booking Page" library="keywords">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URLCONFIRMBOOKING}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220309 16:55:26.015" level="INFO">Opening url 'http://rental13.infotiv.net/webpage/html/gui/confirmBook.php'</msg>
+<status status="PASS" starttime="20220309 16:55:26.014" endtime="20220309 16:55:26.052"/>
+</kw>
+<status status="PASS" starttime="20220309 16:55:26.014" endtime="20220309 16:55:26.052"/>
+</kw>
+<kw name="Click On Title" library="keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="title"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220309 16:55:26.053" level="INFO">Clicking element '//*[@id="title"]'.</msg>
+<status status="PASS" starttime="20220309 16:55:26.053" endtime="20220309 16:55:26.106"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220309 16:55:27.107" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220309 16:55:26.106" endtime="20220309 16:55:27.107"/>
+</kw>
+<status status="PASS" starttime="20220309 16:55:26.052" endtime="20220309 16:55:27.107"/>
+</kw>
+<kw name="Verify Current URL is startpage" library="keywords">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220309 16:55:27.113" level="INFO">Current location is 'http://rental13.infotiv.net/webpage/html/gui/index.php'.</msg>
+<status status="PASS" starttime="20220309 16:55:27.108" endtime="20220309 16:55:27.113"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220309 16:55:28.114" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220309 16:55:27.113" endtime="20220309 16:55:28.115"/>
+</kw>
+<status status="PASS" starttime="20220309 16:55:27.108" endtime="20220309 16:55:28.115"/>
+</kw>
+<doc>This test case verifies the logo are clickable and will take user to the start page.</doc>
+<tag>Header</tag>
+<status status="PASS" starttime="20220309 16:55:26.012" endtime="20220309 16:55:28.116"/>
+</test>
+<test id="s1-s1-t9" name="User Can Click Title On Show Car Page And Divert To Start Page">
+<kw name="Verify On Show Car Page" library="keywords">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URLSHOWCAR}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220309 16:55:28.119" level="INFO">Opening url 'http://rental13.infotiv.net/webpage/html/gui/showCars.php'</msg>
+<status status="PASS" starttime="20220309 16:55:28.119" endtime="20220309 16:55:28.166"/>
+</kw>
+<status status="PASS" starttime="20220309 16:55:28.118" endtime="20220309 16:55:28.167"/>
+</kw>
+<kw name="Click On Title" library="keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="title"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220309 16:55:28.167" level="INFO">Clicking element '//*[@id="title"]'.</msg>
+<status status="PASS" starttime="20220309 16:55:28.167" endtime="20220309 16:55:28.227"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220309 16:55:29.230" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220309 16:55:28.227" endtime="20220309 16:55:29.230"/>
+</kw>
+<status status="PASS" starttime="20220309 16:55:28.167" endtime="20220309 16:55:29.230"/>
+</kw>
+<kw name="Verify Current URL is startpage" library="keywords">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220309 16:55:29.235" level="INFO">Current location is 'http://rental13.infotiv.net/webpage/html/gui/index.php'.</msg>
+<status status="PASS" starttime="20220309 16:55:29.231" endtime="20220309 16:55:29.235"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220309 16:55:30.237" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220309 16:55:29.235" endtime="20220309 16:55:30.237"/>
+</kw>
+<status status="PASS" starttime="20220309 16:55:29.231" endtime="20220309 16:55:30.238"/>
+</kw>
+<doc>This test case verifies the logo are clickable and will take user to the start page.</doc>
+<tag>Header</tag>
+<status status="PASS" starttime="20220309 16:55:28.117" endtime="20220309 16:55:30.238"/>
+</test>
+<test id="s1-s1-t10" name="User Can Click Title On MyPage And Divert To Start Page">
+<kw name="Verify On MyPage" library="keywords">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URLMYPAGE}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220309 16:55:30.241" level="INFO">Opening url 'http://rental13.infotiv.net/webpage/html/gui/myPage.php'</msg>
+<status status="PASS" starttime="20220309 16:55:30.241" endtime="20220309 16:55:30.290"/>
+</kw>
+<status status="PASS" starttime="20220309 16:55:30.241" endtime="20220309 16:55:30.290"/>
+</kw>
+<kw name="Click On Title" library="keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="title"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220309 16:55:30.290" level="INFO">Clicking element '//*[@id="title"]'.</msg>
+<status status="PASS" starttime="20220309 16:55:30.290" endtime="20220309 16:55:30.348"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220309 16:55:31.349" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220309 16:55:30.349" endtime="20220309 16:55:31.350"/>
+</kw>
+<status status="PASS" starttime="20220309 16:55:30.290" endtime="20220309 16:55:31.350"/>
+</kw>
+<kw name="Verify Current URL is startpage" library="keywords">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220309 16:55:31.356" level="INFO">Current location is 'http://rental13.infotiv.net/webpage/html/gui/index.php'.</msg>
+<status status="PASS" starttime="20220309 16:55:31.351" endtime="20220309 16:55:31.356"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220309 16:55:32.357" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220309 16:55:31.356" endtime="20220309 16:55:32.357"/>
+</kw>
+<status status="PASS" starttime="20220309 16:55:31.351" endtime="20220309 16:55:32.357"/>
+</kw>
+<doc>This test case verifies the logo are clickable and will take user to the start page.</doc>
+<tag>Header</tag>
+<status status="PASS" starttime="20220309 16:55:30.239" endtime="20220309 16:55:32.358"/>
+</test>
+<test id="s1-s1-t11" name="Verify Start Date In Date Selection">
+<kw name="Go To Web Page" library="keywords">
+<kw name="Load Page" library="keywords">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220309 16:55:32.361" level="INFO">Opening url 'http://rental13.infotiv.net/webpage/html/gui/index.php'</msg>
+<status status="PASS" starttime="20220309 16:55:32.360" endtime="20220309 16:55:32.398"/>
+</kw>
+<status status="PASS" starttime="20220309 16:55:32.360" endtime="20220309 16:55:32.398"/>
+</kw>
+<kw name="Verify Page Loaded" library="keywords">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Infotiv Car Rental</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220309 16:55:32.398" endtime="20220309 16:55:32.404"/>
+</kw>
+<status status="PASS" starttime="20220309 16:55:32.398" endtime="20220309 16:55:32.404"/>
+</kw>
+<status status="PASS" starttime="20220309 16:55:32.360" endtime="20220309 16:55:32.404"/>
+</kw>
+<kw name="Verify Earliest Selectable Date Is Today" library="keywords">
+<kw name="Get Current Date" library="DateTime">
+<var>${CurrentDate}</var>
+<arg>result_format=%Y-%m-%d</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<msg timestamp="20220309 16:55:32.407" level="INFO">${CurrentDate} = 2022-03-09</msg>
+<status status="PASS" starttime="20220309 16:55:32.404" endtime="20220309 16:55:32.407"/>
+</kw>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${EarliestDate}</var>
+<arg>id:start</arg>
+<arg>min</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20220309 16:55:32.429" level="INFO">${EarliestDate} = 2022-03-09</msg>
+<status status="PASS" starttime="20220309 16:55:32.407" endtime="20220309 16:55:32.429"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${CurrentDate}</arg>
+<arg>${EarliestDate}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20220309 16:55:32.429" endtime="20220309 16:55:32.429"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${EarliestDate}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220309 16:55:32.429" level="INFO">2022-03-09</msg>
+<status status="PASS" starttime="20220309 16:55:32.429" endtime="20220309 16:55:32.429"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220309 16:55:33.429" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220309 16:55:32.429" endtime="20220309 16:55:33.430"/>
+</kw>
+<status status="PASS" starttime="20220309 16:55:32.404" endtime="20220309 16:55:33.430"/>
+</kw>
+<doc>This test case verifies the start date on date selection</doc>
+<tag>Date Selection</tag>
+<status status="PASS" starttime="20220309 16:55:32.359" endtime="20220309 16:55:33.430"/>
+</test>
+<test id="s1-s1-t12" name="Verify Booking Flow For A login User">
+<kw name="Given User Is On Start Page" library="keywords">
+<kw name="Verify Current URL is startpage" library="keywords">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220309 16:55:33.440" level="INFO">Current location is 'http://rental13.infotiv.net/webpage/html/gui/index.php'.</msg>
+<status status="PASS" starttime="20220309 16:55:33.436" endtime="20220309 16:55:33.440"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220309 16:55:34.442" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220309 16:55:33.440" endtime="20220309 16:55:34.443"/>
+</kw>
+<status status="PASS" starttime="20220309 16:55:33.435" endtime="20220309 16:55:34.443"/>
+</kw>
+<kw name="Verify Login Possibility" library="keywords">
+<kw name="Page Should Contain Button" library="SeleniumLibrary">
+<arg>//*[@id="login"]</arg>
+<doc>Verifies button ``locator`` is found from current page.</doc>
+<msg timestamp="20220309 16:55:34.470" level="INFO">Current page contains button '//*[@id="login"]'.</msg>
+<status status="PASS" starttime="20220309 16:55:34.444" endtime="20220309 16:55:34.470"/>
+</kw>
+<status status="PASS" starttime="20220309 16:55:34.443" endtime="20220309 16:55:34.470"/>
+</kw>
+<status status="PASS" starttime="20220309 16:55:33.434" endtime="20220309 16:55:34.470"/>
+</kw>
+<kw name="When User Login With Credential" library="keywords">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:email</arg>
+<arg>${USER}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220309 16:55:34.471" level="INFO">Typing text 'tester@test.com' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20220309 16:55:34.471" endtime="20220309 16:55:34.671"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220309 16:55:34.671" level="INFO">Typing text 'testing123' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20220309 16:55:34.671" endtime="20220309 16:55:34.715"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//*[@id="login"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220309 16:55:34.715" level="INFO">Clicking button '//*[@id="login"]'.</msg>
+<status status="PASS" starttime="20220309 16:55:34.715" endtime="20220309 16:55:34.895"/>
+</kw>
+<kw name="Verify Successful Login" library="keywords">
+<kw name="Page Should Contain Button" library="SeleniumLibrary">
+<arg>//*[@id="logout"]</arg>
+<doc>Verifies button ``locator`` is found from current page.</doc>
+<msg timestamp="20220309 16:55:34.910" level="INFO">Current page contains button '//*[@id="logout"]'.</msg>
+<status status="PASS" starttime="20220309 16:55:34.895" endtime="20220309 16:55:34.910"/>
+</kw>
+<status status="PASS" starttime="20220309 16:55:34.895" endtime="20220309 16:55:34.910"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220309 16:55:35.912" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220309 16:55:34.910" endtime="20220309 16:55:35.913"/>
+</kw>
+<status status="PASS" starttime="20220309 16:55:34.471" endtime="20220309 16:55:35.913"/>
+</kw>
+<kw name="Then User Can Complete Booking" library="keywords">
+<kw name="Verify On Booking Page" library="keywords">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${URLBOOKING}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220309 16:55:35.920" level="INFO">Current location is 'http://rental13.infotiv.net/webpage/html/gui/index.php'.</msg>
+<status status="PASS" starttime="20220309 16:55:35.915" endtime="20220309 16:55:35.921"/>
+</kw>
+<status status="PASS" starttime="20220309 16:55:35.915" endtime="20220309 16:55:35.921"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="continue"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220309 16:55:35.922" level="INFO">Clicking element '//*[@id="continue"]'.</msg>
+<status status="PASS" starttime="20220309 16:55:35.921" endtime="20220309 16:55:36.111"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//*[@id="bookQ7pass7"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220309 16:55:36.111" level="INFO">Clicking button '//*[@id="bookQ7pass7"]'.</msg>
+<status status="PASS" starttime="20220309 16:55:36.111" endtime="20220309 16:55:36.206"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220309 16:55:37.208" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220309 16:55:36.206" endtime="20220309 16:55:37.209"/>
+</kw>
+<kw name="Input Card Details" library="keywords">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="cardNum"]</arg>
+<arg>1234567891011121</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220309 16:55:37.210" level="INFO">Typing text '1234567891011121' into text field '//*[@id="cardNum"]'.</msg>
+<status status="PASS" starttime="20220309 16:55:37.209" endtime="20220309 16:55:37.277"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="fullName"]</arg>
+<arg>Tammy Tester</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220309 16:55:37.278" level="INFO">Typing text 'Tammy Tester' into text field '//*[@id="fullName"]'.</msg>
+<status status="PASS" starttime="20220309 16:55:37.277" endtime="20220309 16:55:37.310"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="cvc"]</arg>
+<arg>123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220309 16:55:37.310" level="INFO">Typing text '123' into text field '//*[@id="cvc"]'.</msg>
+<status status="PASS" starttime="20220309 16:55:37.310" endtime="20220309 16:55:37.339"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220309 16:55:38.341" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220309 16:55:37.339" endtime="20220309 16:55:38.341"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//*[@id="confirm"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220309 16:55:38.341" level="INFO">Clicking button '//*[@id="confirm"]'.</msg>
+<status status="PASS" starttime="20220309 16:55:38.341" endtime="20220309 16:55:38.434"/>
+</kw>
+<status status="PASS" starttime="20220309 16:55:37.209" endtime="20220309 16:55:38.434"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220309 16:55:39.436" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220309 16:55:38.435" endtime="20220309 16:55:39.436"/>
+</kw>
+<kw name="Verify Booking Is Completed" library="keywords">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>id:confirmMessage</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220309 16:55:39.438" endtime="20220309 16:55:39.454"/>
+</kw>
+<status status="PASS" starttime="20220309 16:55:39.437" endtime="20220309 16:55:39.454"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220309 16:55:40.455" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220309 16:55:39.454" endtime="20220309 16:55:40.455"/>
+</kw>
+<kw name="To Clear Booking Item" library="keywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//*[@id="mypage"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220309 16:55:40.456" level="INFO">Clicking button '//*[@id="mypage"]'.</msg>
+<status status="PASS" starttime="20220309 16:55:40.456" endtime="20220309 16:55:40.530"/>
+</kw>
+<kw name="Verify On MyPage" library="keywords">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URLMYPAGE}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220309 16:55:40.530" level="INFO">Opening url 'http://rental13.infotiv.net/webpage/html/gui/myPage.php'</msg>
+<status status="PASS" starttime="20220309 16:55:40.530" endtime="20220309 16:55:40.565"/>
+</kw>
+<status status="PASS" starttime="20220309 16:55:40.530" endtime="20220309 16:55:40.565"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@id="unBook1"]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220309 16:55:40.565" endtime="20220309 16:55:40.571"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//*[@id="unBook1"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220309 16:55:40.571" level="INFO">Clicking button '//*[@id="unBook1"]'.</msg>
+<status status="PASS" starttime="20220309 16:55:40.571" endtime="20220309 16:55:40.645"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220309 16:55:42.647" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220309 16:55:40.645" endtime="20220309 16:55:42.648"/>
+</kw>
+<kw name="Handle Alert" library="SeleniumLibrary">
+<arg>action=ACCEPT</arg>
+<arg>timeout=2s</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<msg timestamp="20220309 16:55:42.650" level="INFO">HANDLE::&lt;class 'datetime.timedelta'&gt;::0:00:02</msg>
+<status status="PASS" starttime="20220309 16:55:42.648" endtime="20220309 16:55:42.656"/>
+</kw>
+<status status="PASS" starttime="20220309 16:55:40.455" endtime="20220309 16:55:42.657"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220309 16:55:43.657" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220309 16:55:42.657" endtime="20220309 16:55:43.658"/>
+</kw>
+<kw name="Logout From Web Page" library="keywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//*[@id="logout"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220309 16:55:43.660" level="INFO">Clicking button '//*[@id="logout"]'.</msg>
+<status status="PASS" starttime="20220309 16:55:43.659" endtime="20220309 16:55:43.764"/>
+</kw>
+<status status="PASS" starttime="20220309 16:55:43.658" endtime="20220309 16:55:43.765"/>
+</kw>
+<status status="PASS" starttime="20220309 16:55:35.914" endtime="20220309 16:55:43.765"/>
+</kw>
+<doc>This test case verifies the navigation flow of the booking</doc>
+<tag>VG_test</tag>
+<status status="PASS" starttime="20220309 16:55:33.432" endtime="20220309 16:55:43.765"/>
+</test>
+<kw name="End Web Test" library="keywords" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220309 16:55:43.767" endtime="20220309 16:55:43.854"/>
+</kw>
+<status status="PASS" starttime="20220309 16:55:43.767" endtime="20220309 16:55:43.854"/>
+</kw>
+<doc>Some basic information about the whole test suite</doc>
+<status status="PASS" starttime="20220309 16:55:06.972" endtime="20220309 16:55:43.854"/>
+</suite>
+<status status="PASS" starttime="20220309 16:55:06.965" endtime="20220309 16:55:43.856"/>
+</suite>
+<statistics>
+<total>
+<stat pass="12" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Date Selection</stat>
+<stat pass="10" fail="0" skip="0">Header</stat>
+<stat pass="1" fail="0" skip="0">VG_test</stat>
+</tag>
+<suite>
+<stat pass="12" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="12" fail="0" skip="0" id="s1-s1" name="Webtest">Tests.Webtest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
