@@ -21,7 +21,6 @@ pipeline {
                 }
             }
         }
-            
         stage('Newman') {
             steps {
                 sh "newman run Postman_AutoLabb3.postman_collection.json --environment Postman_AutoLabb3_Environment.postman_environment.json --reporters junit"
@@ -30,6 +29,11 @@ pipeline {
                 always {
                     junit '**/*xml'
                 }
+            }
+        }
+        stage('Code Coverage') {
+            steps {
+                sh 'mvn clean cobertura:cobertura'
             }
         }
     }
