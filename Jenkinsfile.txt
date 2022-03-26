@@ -20,17 +20,17 @@ pipeline {
             steps {
                 sh "newman run Postman_AutoLabb3.postman_collection.json --environment Postman_AutoLabb3_Environment.postman_environment.json --reporters junit"
             }
-        }
-        stage('Code Coverage') {
-            steps {
-                sh 'mvn clean cobertura:cobertura'
-            }
             post {
                 always {
                     junit 'newman/newmann-*.xml'
                 }
             }
         }
-        
+        stage('Jacoco') {
+            steps {
+                echo 'Code Coverage'
+                jacoco()
+            }
+        }
     }
 }
