@@ -16,14 +16,14 @@ pipeline {
                 sh "mvn test"
             }
         }
-        stage('Code Coverage') {
-            steps {
-                sh 'mvn -B cobertura:cobertura'
-            }
-        }
         stage('API testing with Newman') {
             steps {
                 sh "newman run Postman_AutoLabb3.postman_collection.json --environment Postman_AutoLabb3_Environment.postman_environment.json --reporters junit"
+            }
+        }
+        stage('Code Coverage') {
+            steps {
+                sh 'mvn -B cobertura:cobertura'
             }
             post {
                 always {
