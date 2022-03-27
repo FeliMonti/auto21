@@ -1,6 +1,7 @@
 *** Keywords ***
 Begin Web Test
     Open Browser  about:blank  ${BROWSER}
+    Maximize Browser Window
 
 Go To Web Page
     Load Page
@@ -14,15 +15,12 @@ Verify Page Loaded
 
 Click On Logo
     Click Element                       //*[@id="logo"]
-    Sleep  1s
 
 Click On Title
     Click Element                       //*[@id="title"]
-    Sleep  1s
 
 Verify Current URL is startpage
     location Should Be  ${URL}
-    Sleep  1s
 
 Verify On Booking Page
     location Should Be  ${URLBOOKING}
@@ -41,7 +39,6 @@ Verify Earliest Selectable Date Is Today
     ${EarliestDate}  Get Element Attribute  id:start  min
     Should Be Equal   ${CurrentDate}  ${EarliestDate}
     Log  ${EarliestDate}
-    Sleep  1s
 
 User Is On Start Page
     Verify Current URL is startpage
